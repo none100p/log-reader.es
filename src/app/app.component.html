@@ -1,0 +1,28 @@
+<div>
+  <h4>Instructions</h4>
+  <ul>
+    <li>Run `yarn lint:es-stats`</li>
+    <li>Put a result from terminal to assets/log.ts file</li>
+    <li>Enjoy parsed errors =)</li>
+  </ul>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rule of result | keyvalue | orderBy: 'value'">
+        <td>{{rule.key}}</td>
+        <td>{{rule.value}}</td>
+      </tr>
+      <tr>
+        <td>total</td>
+        <td>{{total}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
